@@ -133,7 +133,6 @@ for (smpl.size in list(c(25, 25), c(25, 150), c(150, 25), c(150, 150))) {
                              nfolds = 5,
                              augment.func = aug.func_s) # the modification that uses cluster-specific propensity scores and augmentation terms with covariates and cluster dummies
 
-    
     m2 <- fit.subgroup(x = covschmat, y = dat$Y,
                        trt = dat$trt, propensity.func = propensity.clustermean,
                        loss   = "sq_loss_lasso", penalty.factor= schpen_only,
@@ -151,12 +150,12 @@ for (smpl.size in list(c(25, 25), c(25, 150), c(150, 25), c(150, 150))) {
                              augment.func = aug.func_s, 
                              nfolds = 5) # the modification that uses cluster-specific propensity scores, adds cluster dummies as moderator variables, and adds augmentation terms with covariates  and cluster dummies
     
+    # :: get the benefit scores from weighting methods
     covmat_test <- as.matrix(dat_test[, c(paste0("X", c(3, 4, 5)))])
     covschmat_test <- model.matrix(~ X3 + X4 + X5 + id + 0, dat_test)
     covschmat_test <- covschmat_test[, !colnames(covschmat_test) %in% "id1"]
     covmat_demean_test <- apply(covmat_test, 2, function(x) x - ave(x, dat_test$id))
     
-    # :: get the benefit scores from weighting methods
     m0_score <- predict(m0, covmat_test) # get the benefit scores
     
     m1_score <- predict(m1, covmat_test)

@@ -35,7 +35,7 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
   
   For our empirical analysis, we used data collected by [Barrera-Osorio et al. (2011)](https://doi.org/10.1257/app.3.2.167). The data can be downloaded from openICPSR by clicking [here](https://doi.org/10.3886/E113783V1). For more information on the data, please refer to the detiled report by [Barrera-Osorio et al. (2011)](https://doi.org/10.1257/app.3.2.167) and the codebook provided [here](https://doi.org/10.3886/E113783V1). 
 
-* `DataAnalysisCodes.R` 
+* `CCTdataAnalysisCodes.R` 
  
    This `R` file can be used to replicate our data analysis.
 
