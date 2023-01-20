@@ -19,9 +19,14 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
 
    This `R` file includes data generating codes for data from a multisite randomized trial with a cluster-level unmeasured covariate.
 
+* `Qlearn.R`   
+
+   This `R` file includes a function named `Qlearn` to implement our proposed modifcations for Q-learning as well as the baseline Q-learning method.
+
 * `SimulationCodes.R`
  
    This `R` file includes simulation codes with our proposed modifcations for Q-learning and weighting methods where the parameter `beta1` represents the cofficient of a cross-level interaction effect between treatment status and a cluster-level unmeasured covariate. For more information on simulation condtions, please refer to [our paper](XXXXXXXXXXXXXXXXX).
+
 
 
 ## CCT Data Study
