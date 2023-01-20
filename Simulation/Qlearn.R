@@ -5,6 +5,7 @@
 if(! "lme4" %in% installed.packages()){
   install.packages("lme4", dependencies = TRUE)
 }
+
 library("lme4")
 
 # The Qlearn function is a tool for implementing our proposed modifications for Q-learning as well as the baseline Q-learning method. 
