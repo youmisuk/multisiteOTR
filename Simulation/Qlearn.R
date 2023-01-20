@@ -2,12 +2,6 @@
 # Designing Optimal, Data-Driven Policies from Multisite Randomized Trials
 # by Youmi Suk and Chan Park
 
-if(! "lme4" %in% installed.packages()){
-  install.packages("lme4", dependencies = TRUE)
-}
-
-library("lme4")
-
 # The Qlearn function is a tool for implementing our proposed modifications for Q-learning as well as the baseline Q-learning method. 
 Qlearn <- function(Yname, Trtname, Xname, interTrt=formula(~1), IDname, traindata, testdata=NULL,
                    method = c("Q-lm", "Q-fe", "Q-ri", "Q-rs", "Q-dm", "Q-dm-ri", "Q-dm-rs")) {
