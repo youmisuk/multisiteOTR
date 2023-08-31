@@ -31,7 +31,7 @@ aug.func_s <- function(x, y) {
 }
 
 # :: conduct simulations
-reps <- 2 # num. of replications
+reps <- 500 # num. of replications
 
 rslt_1 <- rslt_2 <- rslt_3 <- rslt_4 <- list() # lists for saving benefit scores under sample size conditions 1, 2, 3, and 4 for (25, 25), (25, 150), (150, 25), and (150, 150), respectively
 
